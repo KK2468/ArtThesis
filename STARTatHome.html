@@ -1,0 +1,494 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+      🏠 Home Sweet Home
+    </title>
+
+    <style>
+        html {
+        background: url("At Home.jpg") no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+        background-size: cover;
+        overflow: hidden;
+        }
+
+            /*Home pin*/
+            .box {
+              top: 51vh;
+              left: 80.5vw;
+              width: 5%;
+              height:5%;
+              background-image: url("star.png");
+              background-position: top;
+              background-repeat: no-repeat;
+              background-size: contain;
+              position:absolute;
+              }
+
+            .box:hover > .pinText {
+              display: block;
+            }
+
+            @media screen and (max-width: 768px) {
+              .box {
+                top: 417px;
+                left: 438px;:
+              }
+            }
+
+            @media screen and (max-width: 414px) {
+              .box {
+                top: 225px;
+                left: 236px;:
+              }
+            }
+
+            @media screen and (max-width: 375px) {
+              .box {
+                top: 204px;
+                left: 215px;:
+              }
+            }
+
+            @media screen and (max-width: 360px) {
+              .box {
+                top: 196px;
+                left: 206px;:
+              }
+            }
+
+            .left{
+             position:fixed;
+             bottom:5px;
+             left:20px;
+             font-size: 1.4vw;
+             float: left
+             }
+
+                @media screen and (max-width: 768px) {
+                  .left {
+                    bottom:470px;
+                  }
+                }
+
+                @media screen and (max-width: 414px) {
+                  .left {
+                    bottom:440px;
+                  }
+                }
+
+                @media screen and (max-width: 375px) {
+                  .left {
+                    bottom:400px;
+                  }
+                }
+
+                @media screen and (max-width: 360px) {
+                  .left {
+                    bottom:384px;
+                  }
+                }
+
+            .right{
+              position:fixed;
+              bottom:5px;
+              right:20px;
+              font-size: 1.4vw;
+              float: left
+              }
+
+                  @media screen and (max-width: 768px) {
+                    .right {
+                      bottom:470px;
+                    }
+                  }
+
+                  @media screen and (max-width: 414px) {
+                    .right {
+                      bottom:440px;
+                    }
+                  }
+
+                  @media screen and (max-width: 375px) {
+                    .right {
+                      bottom:400px;
+                    }
+                  }
+
+                  @media screen and (max-width: 360px) {
+                    .right {
+                      bottom:384px;
+                    }
+                  }
+
+            .pinText {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 85%;
+              white-space: nowrap;
+              display: none;
+              background-color: white;
+              opacity:100%;
+              width: auto;
+              font-size: 1.25vw;
+              font-family: monospace;
+              border-radius: 0%;
+              text-align: center;
+              z-index: 2
+              }
+
+              .tooltip {
+                position: relative;
+                display: inline-block;
+                padding: 0.35vw;
+                border-radius: 0%;
+                border: 5.5px solid black;
+                }
+
+              .tooltip.tooltiptext {
+                visibility: hidden;
+                width: auto;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                margin-left: -60px;
+                opacity: 0;
+                }
+
+              .tooltip.tooltiptext::after {
+                content: "";
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent
+              }
+
+              .tooltip:hover.tooltiptext {
+                visibility: visible;
+                opacity: 95%
+              }
+
+              /* The Modal (background) */
+              .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding: 1.5vw; /* Location of the box */
+                left: -655;
+                top: -255;
+                width: 300%; /* Full width */
+                height: 325%; /* Full height */
+                overflow: hidden;; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: slategray; /* Black w/ opacity */
+                }
+
+              /* Modal Content */
+              .modal-content {
+                background-color: white;
+                margin: auto;
+                padding: .5vw;
+                border: .05vw solid #888;
+                height: 95%
+                }
+
+              /* The Close Button */
+              .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                }
+
+              .close:hover,
+              .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+                }
+
+            /*door pin*/
+            .box1 {
+              top: 25.5vw;
+              left: .25vw;
+              width: 5.5%;
+              height: 5.5%;
+              background-image: url("star.png");
+              background-position: top;
+              background-repeat: no-repeat;
+              background-size: contain;
+              position:absolute;
+              }
+
+              .pinText2 {
+                position: absolute;
+                top: 65%;
+                transform: translateY(-50%);
+                left: 100%;
+                white-space: nowrap;
+                display: none;
+                background-color: white;
+                opacity:100%;
+                width: auto;
+                font-size: 1.25vw;
+                font-family: monospace;
+                border-radius: 0%;
+                text-align: center;
+                z-index: 2
+                }
+
+              .box1:hover > .pinText2 {
+                display: block;
+              }
+
+              @media screen and (max-width: 768px) {
+                .box1{
+                  top: 458px;
+                  left: 458px;:
+                }
+              }
+
+              @media screen and (max-width: 414px) {
+                .box1 {
+                  top: 247px;
+                  left: 247px;:
+                }
+              }
+
+              @media screen and (max-width: 375px) {
+                .box1 {
+                  top: 225px;
+                  left: 223px;:
+                }
+              }
+
+              @media screen and (max-width: 360px) {
+                .box1 {
+                  top: 215px;
+                  left: 215px;:
+                }
+              }
+
+              /*audio pin*/
+              .aud {
+                top: 47vh;
+                left: 80vw;
+                width: 5%;
+                height:5%;
+                background-image: url("audio.png");
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: contain;
+                position:absolute;
+                }
+
+              .aud:hover > .pinText2 {
+                display: block;
+              }
+
+              @media screen and (max-width: 768px) {
+                .aud {
+                  top: 417px;
+                  left: 438px;:
+                }
+              }
+
+              @media screen and (max-width: 414px) {
+                .aud {
+                  top: 225px;
+                  left: 236px;:
+                }
+              }
+
+              @media screen and (max-width: 375px) {
+                .aud {
+                  top: 204px;
+                  left: 215px;:
+                }
+              }
+
+              @media screen and (max-width: 360px) {
+                .aud {
+                  top: 196px;
+                  left: 206px;:
+                }
+              }
+
+            a:hover {
+              color: white;
+              text-decoration: none;
+              }
+
+            a:link {
+              color: #93C47D;
+              text-decoration: none;
+              }
+
+            a:visited {
+              color:#316A9E;
+              text-decoration: none;
+              }
+    </style>
+  </head>
+
+  <body>
+
+    <img src="At Home.jpg" style="width:100%; opacity:0%" usemap="#Explore">
+    <map name = "Explore"> <!--coords: topleft corner (x,y) bottomright corner (x,y) for corners-->
+      <area shape="rect" coords="1125,350,1300,525" alt="Photos" href="MapPageSkeleton.html">
+      <area shape="rect" coords="0,0,100,1500" alt="Door" href="MapPageSkeleton.html">
+    </map>
+
+    <div>  <!--Photoalbum "star pin to change"-->
+      <div id="pin1" class="box">
+        <div class="pinText">
+          <div class="tooltip">
+            <p class="tooltiptext">
+              <h style="font-size:1.5vw; font-weight:bold; color: black; align: center; ">
+                You found a paper bag!
+                <p style="font-weight:normal"> Hmm...feels kinda heavy...</p>
+              </h>
+              <!-- Trigger/Open The Modal -->
+              &nbsp;<button id="myBtn">LOOK INSIDE</button>
+              &nbsp;<span style="font-family: sans-serif; border-style: solid; border-width: .05vw; border-color: black; font-size: 1vw; background-image: linear-gradient(lightgray, white);">
+                <a href="STARTatHome.html">maybe next time...</a></span>
+                <br><br>
+
+               <!-- The Modal -->
+               <div id="myModal" class="modal">
+                 <!-- Modal content -->
+                 <div class="modal-content">
+                   <p style="font-size: 1.5vw">Hmm seems like there are few photo albums in here...</p>
+                   <br>
+                     <span style="font-size: 1.25vw; border-style: solid; border-width: .05vw; border color: black; text-align: left; padding: 0.5vw;  background-image: linear-gradient(lightgray, white);">
+                       <a href="OldFashioned.html">Let's look through them!</a></span>
+                       &nbsp;&nbsp;
+                       <span class="close" style="border-style: solid; border-width: .05vw; border-color: black; color: black; font-size: 1.25vw; font-weight: normal; float: none; padding: 0.5vw; background-image: linear-gradient(lightgray, white)">
+                         not feeling nostalgic today</span>
+                        <br><br><img src="PhotoAlbums7.png" style="height:40%"><img src="PhotoAlbums5.png" style="height:70%">&nbsp;<img src="PhotoAlbums1.png" style="height:70%">
+                 </div>
+               </div>
+             </div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--DOOR-->
+      <div id="pin2" class="box1">
+        <div class="pinText2">
+          <div class="tooltip">
+            <h2>Congratulations, <br>you have found a <b><u>DOOR</u></b>!!</h2>
+            <p class="tooltiptext">
+              Unfortunately, it is far too big to add to your inventory.
+              <br>But, you can still do a lot with it:
+              <br><br><br><span style="font-size: 1.25vw; border-style: solid; border-width:.05vw; border color: black; text-align: left; padding: 0.5vw;  background-image: linear-gradient(lightgray, white);">
+                <a href="Front Door.html">Nice day for a walk!</a></span>
+                &nbsp;&nbsp;
+                <span style="font-size: 1.25vw; border-style: solid; border-width:.05vw; border color: black; text-align: left; padding: 0.5vw;  background-image: linear-gradient(lightgray, white);">
+                  <a href="MapPageSkeleton.html">Go to Map</a></span>
+                    &nbsp;&nbsp;<span class="close" style="border-style: solid; border-width: .05vw; border-color: black; color: black; font-size: 1.25vw; font-weight: normal; float: none; padding: 0.5vw; background-image: linear-gradient(lightgray, white)">
+                      <a href="STARTatHome.html">Stay home</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--WINDOW-->
+      <div id="pin2" class="box1" style="top: 20vw; left: 14vw; width:5%; height:5%;">
+        <div class="pinText2">
+          <div class="tooltip">
+            <h2>Congratulations, <br>you made it to the <b><u>WINDOW</u></b>!!</h2>
+            <p class="tooltiptext">
+              Now you can see what's going on outside without leaving home!
+              <br><i>I think this window is particularly good at giving live weather reports
+                <br>...and some very local neighborhood news...</i>
+              <br><br><br><span style="font-size: 1.25vw; border-style: solid; border-width:.05vw; border color: black; text-align: left; padding: 0.5vw;  background-image: linear-gradient(lightgray, white);">
+                <a href="Window.html">Go on, take a look!</a></span>
+                    &nbsp;&nbsp;<span class="close" style="border-style: solid; border-width: .05vw; border-color: black; color: black; font-size: 1.25vw; font-weight: normal; float: none; padding: 0.5vw; background-image: linear-gradient(lightgray, white)">
+                      <a href="STARTatHome.html">Leave Window</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--TEA-->
+      <div id="pin2" class="box1" style="top: 24.5vw; left: 64vw; width:4%; height:4%;">
+        <div class="pinText2" style="top:70; left:-610">
+          <div class="tooltip">
+            <h3>Care for Some Tea?</h3>
+            <p class="tooltiptext">
+              <img src="Tea.jpg" height="400vw">
+              <br><br><span style="font-size: 1.25vw; border-style: solid; border-width:.05vw; border color: black; text-align: left; padding: 0.5vw;  background-image: linear-gradient(lightgray, white);">
+                <a href="饮茶.html">Yes!</a></span>
+                    &nbsp;&nbsp;<span class="close" style="border-style: solid; border-width: .05vw; border-color: black; color: black; font-size: 1.25vw; font-weight: normal; float: none; padding: 0.5vw; background-image: linear-gradient(lightgray, white)">
+                      <a href="STARTatHome.html">Maybe Later</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Joe-->
+      <div id="pin2" class="aud" style="top: 20vw; left: 18vw; width:4%; height:4%;">
+        <div class="pinText2" style="top:20; left:60">
+          <div class="tooltip" style="border: .5px solid black;">
+            Neighborhood Sounds
+            <p class="tooltiptext">
+              <audio controls>
+                <source src="Joe on the Porch.mp3" type="audio/mpeg">
+                </source>
+              </p>
+          </div>
+        </div>
+      </div>
+
+
+  </body>
+
+  <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      // how to get it work for everything else??
+      var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+      btn.onclick = function() {
+      modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+      modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        }
+        }
+  </script>
+
+  <script>
+  </script>
+
+
+</html>

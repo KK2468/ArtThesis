@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+      Out the Door
+    </title>
+
+    <style>
+    /* POPUP & POPUP container */
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter:alpha(opacity=70);
+        -moz-opacity:0.7;
+        -khtml-opacity: 0.7;
+        opacity: 0.7;
+        z-index: 100;
+        display: none;
+      }
+
+
+      .popup{
+        width: 100%;
+        margin: 0 auto;
+        display: none;
+        position: fixed;
+        z-index: 101;
+        top: 0
+        }
+
+      .cnt223{
+        top: .5vh;
+        left: 20vw;
+        width: 60%;
+        margin: 5vw auto;
+        background: #f3f3f3;
+        font-size: 1.25vw;
+        font-family: monospace;
+        position: absolute;
+        z-index: 103;
+        padding: 5px 5px;
+        border-radius: 0;
+        box-shadow: 0 2px 5px #000;
+        text-align: center;
+        }
+
+    .cnt223 a{
+      text-decoration: none;
+        }
+
+      .cnt223 p{
+        clear: both;
+            color: #555555;
+            /* text-align: justify; */
+            font-size: 20px;
+            font-family: monospace;
+          }
+
+      .cnt223 p a{
+        color: #d91900;
+        font-weight: bold;
+        text-decoration: none;
+        }
+
+      .cnt223 .x{
+        float: right;
+        height: 35px;
+        left: 22px;
+        position: relative;
+        top: -25px;
+        width: 34px;
+        }
+
+      .cnt223 .x:hover{
+        cursor: pointer;
+        }
+
+      /* SLIDES & SLIDE container */
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 48px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+
+      /* TOOLTIPS */
+      .box1 {
+        top: 92vh;
+        left: 42vw;
+        width: 10%;
+        height: 10%;
+        background-image: url("Turn Left.png");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position:absolute;
+        }
+
+        .box2 {
+          top: 92vh;
+          left: 53vw;
+          width: 10%;
+          height: 10%;
+          background-image: url("Turn Right.png");
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: contain;
+          position:absolute;
+          }
+
+        .pinText1 {
+          position: absolute;
+          top: -28.5vh;
+          transform: translateY(-50%);
+          left: -4vw;
+          white-space: nowrap;
+          display: none;
+          background-color: white;
+          opacity:100%;
+          width: auto;
+          font-size: 1.25vw;
+          font-family: monospace;
+          border-radius: 0%;
+          border-width: medium;
+          text-align: center;
+          z-index: 2
+          }
+
+          .pinText2 {
+            position: absolute;
+            top: -23.5vh;
+            transform: translateY(-50%);
+            left: .5vw;
+            white-space: nowrap;
+            display: none;
+            background-color: white;
+            opacity:100%;
+            width: auto;
+            font-size: 1.25vw;
+            font-family: monospace;
+            border-radius: 0%;
+            text-align: center;
+            z-index: 2
+            }
+
+        .box1:hover > .pinText1 {
+          display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+          .box1{
+            top: 458px;
+            left: 458px;:
+          }
+        }
+
+        @media screen and (max-width: 414px) {
+          .box1 {
+            top: 247px;
+            left: 247px;:
+          }
+        }
+
+        @media screen and (max-width: 375px) {
+          .box1 {
+            top: 225px;
+            left: 223px;:
+          }
+        }
+
+        @media screen and (max-width: 360px) {
+          .box1 {
+            top: 215px;
+            left: 215px;:
+          }
+        }
+
+        .box2:hover > .pinText2 {
+          display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+          .box2{
+            top: 458px;
+            left: 458px;:
+          }
+        }
+
+        @media screen and (max-width: 414px) {
+          .box2 {
+            top: 247px;
+            left: 247px;:
+          }
+        }
+
+        @media screen and (max-width: 375px) {
+          .box2 {
+            top: 225px;
+            left: 223px;:
+          }
+        }
+
+        @media screen and (max-width: 360px) {
+          .box2 {
+            top: 215px;
+            left: 215px;:
+          }
+        }
+
+      .tooltip {
+        position: absolute;
+        display: inline-block;
+        font-size: 1.25vw;
+        border-style: solid; border-width: .1vw;
+        border-color: black;
+        text-align: center;
+        padding: 0.2vw;
+        color: black;
+        white-space: nowrap;
+        text-decoration: none;
+        background-color: white
+        }
+
+
+        .tooltip.tooltiptext {
+          visibility: hidden;
+          width: auto;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          margin-left: -60px;
+          opacity: 0;
+          }
+
+        .tooltip.tooltiptext::after {
+          content: "";
+          top: 500%;
+          left: 20%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent
+        }
+
+        .tooltip:hover.tooltiptext {
+          visibility: visible;
+          opacity: 100%
+        }
+
+      .tooltip .tooltiptext a:hover {
+        color: blue;
+        text-decoration: underline;
+        }
+
+        a:hover {
+          color: black;
+          }
+
+        a:link {
+          color: black;
+          text-decoration: none;
+          }
+
+        a:visited {
+          color:gray;
+          text-decoration: none;
+          }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div class='popup'>
+      <div class='cnt223' style="text-align: center; ">
+        <h2 style="text-align">Shoes on. Headphones in...
+        <br><b> Don't forget your keys!</b></h2>
+        <p>
+          <img src="Shoes&All.gif" width="93%">
+        <br><br>
+          <a href='' class='close' style="font-weight: normal; font-size: 1.25vw; border-style: solid; border-width: .05vw; border color: black; text-align: left; padding: 0.5vw;  color: black; background-image: linear-gradient(lightgray, white)">Ready to GO!</a>
+        &nbsp;
+         <span><a href="STARTatHome.html" style="font-weight: normal; font-size: 1.25vw; border-style: solid; border-width: .05vw; border color: black; text-align: left; padding: 0.5vw;  color: black; background-image: linear-gradient(lightgray, white)">nah...go back inside</a></span>
+
+        </p>
+      </div>
+    </div>
+    <br><br>
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <video controls="controls" style="width:80%; position: absolute; left: 10vw; top: 5vh">
+          <source src="Front Door.mov" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div>
+      <span style="position: absolute; top: 88vh; left: 34vw; font-family: monospace; font-size: 1.5vw; font-weight: bold">
+        Hover & Click to Keep Walking or Teleport
+      </span>
+    </div>
+
+    <div id="pin2" class="box1">
+      <div class="pinText1">
+        <div class="tooltip">
+          <p class="tooltiptext">
+            <b>Keep Walking</b>
+              <br><a href="Left Turn.html">Turn Left</a>
+            <br><br>
+            <b>Teleport to:</b>
+            <br><a href="SheepsheadStation.html">Subway Station</a>
+            <br><a href="ManhattanBeach.html">Manhattan Beach</a>
+            <br><a href="BrightonBitches.html">Brighton Beach</a>
+            <br><a href="CI Stillwell.html">Coney Island</a>
+            <br><a href="CalvertVaux.html">Western Salt Marsh</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="pin2" class="box2">
+      <div class="pinText2">
+        <div class="tooltip">
+          <p class="tooltiptext">
+            <b>Keep Walking</b>
+              <br><a href="Right Turn.html">Turn Right</a>
+            <br><br>
+            <b>Teleport to:</b>
+            <br><a href="AveU.html">Little Chinatown</a>
+            <br><a href="IS234.html">Middle School</a>
+            <br><a href="MarinePark.html">Eastern Salt Marsh</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="return" style="position: absolute; top: 88vh; left: 79vw; font-family:monospace;; font-size: 2.25vh">
+      <a href="STARTatHome.html"><u>Go Back Inside</u></a>
+    </div>
+
+
+
+  </body>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+  <script type='text/javascript'>
+    //popup
+    $(function(){
+    var overlay = $('<div id="overlay"></div>');
+    overlay.show();
+    overlay.appendTo(document.body);
+    $('.popup').show();
+    $('.close').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+
+    $('.x').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+    });
+
+    // SLIDES
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      }
+  </script>
+
+</html>

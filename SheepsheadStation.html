@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+      Out the Door
+    </title>
+
+    <style>
+    /* POPUP & POPUP container */
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter:alpha(opacity=70);
+        -moz-opacity:0.7;
+        -khtml-opacity: 0.7;
+        opacity: 0.7;
+        z-index: 100;
+        display: none;
+      }
+
+
+      .popup{
+        width: 100%;
+        margin: 0 auto;
+        display: none;
+        position: fixed;
+        z-index: 101;
+        top: 0
+        }
+
+      .cnt223{
+        top: .5vh;
+        left: 20vw;
+        width: 60%;
+        margin: 5vw auto;
+        background: #f3f3f3;
+        font-size: 1.25vw;
+        font-family: monospace;
+        position: absolute;
+        z-index: 103;
+        padding: 5px 5px;
+        border-radius: 0;
+        box-shadow: 0 2px 5px #000;
+        text-align: center;
+        }
+
+    .cnt223 a{
+      text-decoration: none;
+        }
+
+      .cnt223 p{
+        clear: both;
+            color: #555555;
+            /* text-align: justify; */
+            font-size: 20px;
+            font-family: monospace;
+          }
+
+      .cnt223 p a{
+        color: #d91900;
+        font-weight: bold;
+        text-decoration: none;
+        }
+
+      .cnt223 .x{
+        float: right;
+        height: 35px;
+        left: 22px;
+        position: relative;
+        top: -25px;
+        width: 34px;
+        }
+
+      .cnt223 .x:hover{
+        cursor: pointer;
+        }
+
+        .return{
+          top: .5vh;
+          left: 1vw;
+          position:absolute;
+          }
+
+          * {box-sizing:border-box}
+
+          /* Slideshow container */
+          .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+          }
+
+          /* Hide the images by default */
+          .mySlides {
+            display: none;
+          }
+
+          /* Next & previous buttons */
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 48px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+
+          .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+          }
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+
+          /* The dots/bullets/indicators */
+          .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+
+          .active, .dot:hover {
+            background-color: #717171;
+          }
+
+          /* Fading animation */
+          .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+
+          @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+
+          @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+
+    </style>
+
+  </head>
+
+  <body>
+    Will have images and video soon
+    TEST
+  <!-- include photos and going to which place and has a lot more options up north
+  include subway videos
+  and also link to one of the bridges! -->
+    <div class='popup'>
+      <div class='cnt223' style="text-align: center; ">
+        <h2 style="text-align">Sheepshead Bay Station
+        <br><b> B, Q to Manhattan or Brighton Beach & Coney Island</b></h2>
+        <p>
+          <img src="HandTest1.gif" height="500vw">
+        <br><br>
+          <a href='' class='close' style="font-weight: normal; font-size: 1.25vw; border-style: solid; border-width: .05vw; border color: black; text-align: left; padding: 0.5vw;  color: black; background-image: linear-gradient(lightgray, white)">Enter</a>
+        &nbsp;
+         <span><a href="STARTatHome.html" style="font-weight: normal; font-size: 1.25vw; border-style: solid; border-width: .05vw; border color: black; text-align: left; padding: 0.5vw;  color: black; background-image: linear-gradient(lightgray, white)">Exit</a></span>
+       </p>
+      </div>
+    </div>
+    <br><br>
+
+    <br><br><br><p></p>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="ConeyIsland.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides fade">
+          <video controls="controls" style="width:100%">
+            <source src="Qtrain.mp4" type="video/mp4">
+          </video>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <div class="return">
+      <a href="STARTatHome.html">Back to Home</a>
+    </div>
+
+
+
+
+  </body>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+  <script type='text/javascript'>
+    //popup
+    $(function(){
+    var overlay = $('<div id="overlay"></div>');
+    overlay.show();
+    overlay.appendTo(document.body);
+    $('.popup').show();
+    $('.close').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+
+    $('.x').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+    });
+
+    // SLIDES
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      }
+  </script>
+
+</html>
