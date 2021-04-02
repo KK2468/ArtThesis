@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+      Photo Albums
+    </title>
+
+    <style>
+      html {
+        background: url("") no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+        background-size: cover;
+        overflow: hidden;
+        }
+
+        #albumcover {
+          display: block;
+          height: 100%;
+          left: 22%;
+          position: absolute;
+          top: 10%;
+          width: 100%;
+          }
+
+          #photoalbum {
+            display: block;
+            height: 100%;
+            left: 12%;
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            }
+
+            #photoalbum2 {
+              display: block;
+              height: 100%;
+              left: -2%;
+              position: absolute;
+              top: 5%;
+              width: 100%;
+              }
+
+        .mySlides {
+          display:none;
+          }
+
+        .return{
+          top: 2vh;
+          left: 87vw;
+          position:absolute;
+          font-size: 1.5vw;
+          font-family: monospace;
+        }
+
+        .arrowL{
+          top: 85%;
+          left: 50%;
+          position:absolute;
+          }
+
+        .arrowR{
+          top: 85%;
+          left: 53%;
+          position:absolute;
+          }
+
+          .tooltip {
+            position: relative;
+            display: inline-block;
+            padding: 0.35vw;
+            border-radius: 0%;
+            border: 5.5px solid black;
+            }
+
+          .tooltip.tooltiptext {
+            visibility: hidden;
+            width: auto;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            margin-left: -60px;
+            opacity: 0;
+            }
+
+          .tooltip.tooltiptext::after {
+            content: "";
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent
+          }
+
+          .tooltip:hover.tooltiptext {
+            visibility: visible;
+            opacity: 95%
+          }
+
+          .pinText2 {
+            position: absolute;
+            top: 65%;
+            transform: translateY(-50%);
+            left: 100%;
+            white-space: nowrap;
+            display: none;
+            background-color: white;
+            opacity:100%;
+            width: auto;
+            font-size: 1.25vw;
+            font-family: monospace;
+            border-radius: 0%;
+            text-align: center;
+            z-index: 2
+            }
+
+          .box1:hover > .pinText2 {
+            display: block;
+          }
+
+          @media screen and (max-width: 768px) {
+            .box1{
+              top: 458px;
+              left: 458px;:
+            }
+          }
+
+          @media screen and (max-width: 414px) {
+            .box1 {
+              top: 247px;
+              left: 247px;:
+            }
+          }
+
+          @media screen and (max-width: 375px) {
+            .box1 {
+              top: 225px;
+              left: 223px;:
+            }
+          }
+
+          @media screen and (max-width: 360px) {
+            .box1 {
+              top: 215px;
+              left: 215px;:
+            }
+          }
+
+          /*audio pin*/
+          .aud {
+            top: 47vh;
+            left: 80vw;
+            width: 7%;
+            height:7%;
+            background-image: url("audio.png");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position:absolute;
+            }
+
+          .aud:hover > .pinText2 {
+            display: block;
+          }
+
+          @media screen and (max-width: 768px) {
+            .aud {
+              top: 417px;
+              left: 438px;:
+            }
+          }
+
+          @media screen and (max-width: 414px) {
+            .aud {
+              top: 225px;
+              left: 236px;:
+            }
+          }
+
+          @media screen and (max-width: 375px) {
+            .aud {
+              top: 204px;
+              left: 215px;:
+            }
+          }
+
+          @media screen and (max-width: 360px) {
+            .aud {
+              top: 196px;
+              left: 206px;:
+            }
+          }
+
+          .click2play{
+            font-family:monospace;
+            position: absolute;
+            top: 8vh;
+            left: 1vw;
+            font-size: 1vw
+            }
+
+    </style>
+
+  </head>
+
+  <body>
+    <br><br>
+    <div class="w3-content w3-display-container">
+      <div id="albumcover" class="mySlides">
+        <img src="PhotoAlbums4.png" width="900vw">
+      </div>
+      <div id="photoalbum" class="mySlides">
+        <img src="美猴王.png" width="1100vw">
+      </div>
+      <div id="photoalbum2" class="mySlides">
+        <img src="Album2.png" width="1500vw">
+      </div>
+      <div id="photoalbum2" class="mySlides">
+        <img src="Album3.png" width="1500vw">
+      </div>
+      <div id="photoalbum2" class="mySlides">
+        <img src="Album4.png" width="1500vw">
+      </div>
+      <div id="photoalbum2" class="mySlides">
+        <img src="Album5.png" width="1500vw">
+      </div>
+      <div id="photoalbum" class="mySlides">
+        <img src="AlbumPlane2.png" width="1100vw">
+      </div>
+      <div id="photoalbum" class="mySlides">
+        <img src="MovingLoop.gif" width="1100vw">
+      </div>
+      <div id="photoalbum" class="mySlides">
+        <img src="NYCAlbum1.png" width="1100vw">
+      </div>
+      <div id="photoalbum2" class="mySlides">
+        <img src="NYCAlbum2.png" width="1500vw">
+      </div>
+      <div id="photoalbum2" class="mySlides">
+        <img src="NYCAlbum3.png" width="1500vw">
+      </div>
+      <div id="photoalbum2" class="mySlides">
+        <img src="NYCAlbum4.png" width="1500vw">
+      </div>
+      <div id="photoalbum" class="mySlides">
+        <img src="NYCAlbum6.png" width="1100vw">
+      </div>
+      <div id="photoalbum" class="mySlides">
+        <img src="Album BackCover.png" width="1100vw">
+      </div>
+      </div>
+
+    <div class="arrowL">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    </div>
+    <div class="arrowR">
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <div class="return">
+      <a href="STARTatHome.html">Back to Home</a>
+    </div>
+    <div id="pin2" class="aud" style="top: 2vw; left: 2vw; width:6%; height:6%;">
+      <div class="pinText2" style="top:20; left:60">
+        <div class="tooltip" style="border: .5px solid black;">
+          <p class="tooltiptext">
+            <audio controls>
+              <source src="PhotoAlbum Audio.mp3" type="audio/mpeg">
+              </source>
+            </p>
+        </div>
+      </div>
+      <div>
+        <span class="click2play">Click Above for Sound</span>
+     </div>
+
+  </body>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+    }
+  </script>
+
+</html>
