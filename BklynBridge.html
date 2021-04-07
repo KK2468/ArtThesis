@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +8,487 @@
     <title>
       Brooklyn Bridge
     </title>
+
+    <style>
+        .return{
+          top: 1.3vh;
+          left: 2vw;
+          font-size: 1.15vw;
+          font-family: monospace;
+          position:absolute;
+          }
+
+          * {box-sizing:border-box}
+
+          /* Slideshow container */
+          .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+          }
+
+          /* Hide the images by default */
+          .mySlides {
+            display: none;
+          }
+
+          /* Next & previous buttons */
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 48px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+
+          .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+          }
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+
+          /* The dots/bullets/indicators */
+          .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+
+          .active, .dot:hover {
+            background-color: #717171;
+          }
+
+          /* Fading animation */
+          .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+
+          @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+
+          @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+
+          /* TOOLTIPS */
+          .box1 {
+            top: 92.5vh;
+            left: 40vw;
+            width: 11%;
+            height: 11%;
+            background-image: url("SheepStationUptown.png");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position:absolute;
+            }
+
+            .box2 {
+              top: 92.5vh;
+              left: 52vw;
+              width: 11%;
+              height: 11%;
+              background-image: url("SheepStationDowntown.png");
+              background-position: top;
+              background-repeat: no-repeat;
+              background-size: contain;
+              position:absolute;
+              }
+
+            .pinText1 {
+              position: absolute;
+              top: -15.5vh;
+              transform: translateY(-50%);
+              left: -3.5vw;
+              white-space: nowrap;
+              display: none;
+              background-color: white;
+              opacity:100%;
+              width: auto;
+              font-size: 1.25vw;
+              font-family: monospace;
+              border-radius: 0%;
+              border-width: medium;
+              text-align: center;
+              z-index: 2
+              }
+
+              .pinText2 {
+                position: absolute;
+                top: -33.5vh;
+                transform: translateY(-50%);
+                left: .5vw;
+                white-space: nowrap;
+                display: none;
+                background-color: white;
+                opacity:100%;
+                width: auto;
+                font-size: 1.25vw;
+                font-family: monospace;
+                border-radius: 0%;
+                text-align: center;
+                z-index: 2
+                }
+
+            .box1:hover > .pinText1 {
+              display: block;
+            }
+
+            @media screen and (max-width: 768px) {
+              .box1{
+                top: 458px;
+                left: 458px;:
+              }
+            }
+
+            @media screen and (max-width: 414px) {
+              .box1 {
+                top: 247px;
+                left: 247px;:
+              }
+            }
+
+            @media screen and (max-width: 375px) {
+              .box1 {
+                top: 225px;
+                left: 223px;:
+              }
+            }
+
+            @media screen and (max-width: 360px) {
+              .box1 {
+                top: 215px;
+                left: 215px;:
+              }
+            }
+
+            .box2:hover > .pinText2 {
+              display: block;
+            }
+
+            @media screen and (max-width: 768px) {
+              .box2{
+                top: 458px;
+                left: 458px;:
+              }
+            }
+
+            @media screen and (max-width: 414px) {
+              .box2 {
+                top: 247px;
+                left: 247px;:
+              }
+            }
+
+            @media screen and (max-width: 375px) {
+              .box2 {
+                top: 225px;
+                left: 223px;:
+              }
+            }
+
+            @media screen and (max-width: 360px) {
+              .box2 {
+                top: 215px;
+                left: 215px;:
+              }
+            }
+
+          .tooltip {
+            position: absolute;
+            display: inline-block;
+            font-size: 1.25vw;
+            border-style: solid; border-width: .1vw;
+            border-color: black;
+            text-align: center;
+            padding: 0.2vw;
+            color: black;
+            white-space: nowrap;
+            text-decoration: none;
+            background-color: white
+            }
+
+
+            .tooltip.tooltiptext {
+              visibility: hidden;
+              width: auto;
+              background-color: #555;
+              color: #fff;
+              text-align: center;
+              border-radius: 6px;
+              padding: 5px 0;
+              position: absolute;
+              z-index: 1;
+              margin-left: -60px;
+              opacity: 0;
+              }
+
+            .tooltip.tooltiptext::after {
+              content: "";
+              top: 500%;
+              left: 20%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: #555 transparent transparent transparent
+            }
+
+            .tooltip:hover.tooltiptext {
+              visibility: visible;
+              opacity: 100%
+            }
+
+          .tooltip .tooltiptext a:hover {
+            color: blue;
+            text-decoration: underline;
+            }
+
+            a:hover {
+              color: black;
+              }
+
+            a:link {
+              color: black;
+              text-decoration: none;
+              }
+
+            a:visited {
+              color:gray;
+              text-decoration: none;
+              }
+
+              /*YOU ARE HERE TOOLTIP & TEXT??*/
+                .tooltip3 {
+                position: absolute;
+                display: inline-block;
+                font-weight: bold;
+                font-family: monospace;
+                font-size: 1.25vw;
+                left: 2vw;
+                top: 7vh;
+                }
+
+                .tooltip3 .tooltiptext3 {
+                  visibility: hidden;
+                  width: 10vw;
+                  background-color: white;
+                  border-style: solid;
+                  border-width: thin;
+                  text-align: center;
+                  border-radius: 6px;
+                  padding: 5px 0;
+                  position: absolute;
+                  z-index: 1;
+                  top: 150%;
+                  left: 40%;
+                  margin-left: -60px;
+                  font-weight: normal;
+                  font-size: 1.15vw
+                  }
+
+                .tooltip3 .tooltiptext3::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent black transparent;
+                }
+
+                .tooltip3:hover .tooltiptext3 {
+                visibility: visible;
+                }
+
+    </style>
+
   </head>
+
+  <body>
+    <br><br>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="Bkbridge 1.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 3.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 4.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 5.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 6.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 7.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 8.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 9.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Bkbridge 10.png" style="width:100%">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+
+    <div id="pin2" class="box1">
+      <div class="pinText1">
+        <div class="tooltip">
+          <p class="tooltiptext">
+            <b>Uptown & Manhattan</b>
+            <br>
+            <br><a href="Williamsburg.html">Williamsburg</a>
+            <br><a href="ManhattanB.html">Manhattan Bridge</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="pin2" class="box2">
+      <div class="pinText2">
+        <div class="tooltip">
+          <p class="tooltiptext">
+            <b>&nbsp;&nbsp;Downtown & Coney Island&nbsp;&nbsp;</b>
+            <br>
+            <br><a href="BBG.html">&nbsp;Brooklyn Botanical Garden&nbsp;</a>
+            <br><a href="Flatbush.html">Midwood/Flatbush</a>
+            <br><a href="KingsHwy.html">Middle School</a>
+            <br><a href="AveU.html">Avenue U</a>
+            <br><a href="SheepsheadStation.html">Sheepshead Bay</a>
+            <br><a href="BrightonBitches.html">Brighton Beach</a>
+            <br><a href="OceanPky.html">Ocean Parkway</a>
+            <br><a href="NYAQ.html">New York Aquarium</a>
+            <br><a href="CIStillwell.html">Coney Island</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="return">
+      <a href="Front Door2.html">Back to Home</a>
+      <br>
+      <a href="MapPageSkeleton.html">Teleport by Map</a>
+    </div>
+    <br><br>
+    <div class="tooltip3">You Are Here
+      <span class="tooltiptext3">Brooklyn Bridge</span>
+    </div>
+
+  </body>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+  <script type='text/javascript'>
+    //popup
+    $(function(){
+    var overlay = $('<div id="overlay"></div>');
+    overlay.show();
+    overlay.appendTo(document.body);
+    $('.popup').show();
+    $('.close').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+
+    $('.x').click(function(){
+    $('.popup').hide();
+    overlay.appendTo(document.body).remove();
+    return false;
+    });
+    });
+
+    // SLIDES
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      }
+  </script>
 
 </html>
